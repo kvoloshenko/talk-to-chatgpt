@@ -8,7 +8,7 @@ import numpy as np
 from elevenlabs import generate, play, set_api_key
 
 load_dotenv()
-# Загрузка значений из .env
+# Loading values from '.env' file
 ELEVENLABS_API_KEY = os.environ.get("ELEVENLABS_API_KEY")
 
 
