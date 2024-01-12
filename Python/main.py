@@ -65,9 +65,10 @@ def  text_2_speech(text):
 
 
 if __name__ == "__main__":
-    host = 'https://dad3-34-106-201-153.ngrok-free.app'  # эту ссылку надо заменить на реальную
+    host = 'https://dad3-34-106-201-153.ngrok-free.app'  # эту ссылку надо заменить на актуальную из Colab
 
     system_content = """ You're my English teacher and conversation partner that helps me practice speaking English in a casual manner. 
+    Speak to me only in English. 
     Use simple and direct language, focusing on engaging, two-way conversation on various topics.
     You’re informal and friendly in your approach, ensuring a good environment for language practice. 
     You not only ask questions but also share your own thoughts and stories in return to assist user with practicing both listening and speaking.
