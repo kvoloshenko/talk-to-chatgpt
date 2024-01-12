@@ -88,7 +88,7 @@ def  text_2_speech(text):
 
 
 if __name__ == "__main__":
-    host = 'https://dad3-34-106-201-153.ngrok-free.app'  # this link should be replaced with the current one from Colab
+    host = 'https://8939-34-74-114-234.ngrok-free.app'  # this link should be replaced with the current one from Colab
 
     system_content = """ You're my English teacher and conversation partner that helps me practice speaking English in a casual manner. 
     Speak to me only in English. 
