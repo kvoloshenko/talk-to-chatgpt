@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  title: Bot Factory API
+  description: Данная реализация предназначена для создания инфраструктуры предоставления услуги chat-bot для клиентов платформы.
+
+servers:
+  - url: '{apiRoot}/5000/'
+    variables:
+      apiRoot:
+        default: https://localhost
+        description: here is apiRoot
+paths:
+  /create_db:
+    post:
+      summary: Bot Owner создает для chat-bot-а Базу Знаний.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/createDbContext'
+      responses:
+        200:
+          description: OK
+
+  /chat:
+    post:
+      summary: User отправляе вопрос (topic) chat-bot-y.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/chatContext'
+      responses:
+        200:
+          description: OK
+
+components:
+  schemas:
+    createDbContext:
+      type: object
+      properties:
+        knowledge_base_url:
+          type: string
+          default: 'https://docs.google.com/document/d/1-v4TCNmZyvgGbEInifI6SLHeienOoZZn'
+        ba:
+          $ref: '#/components/schemas/baType'
+
+    chatContext:
+      type: object
+      properties:
+        topic:
+          type: string
+          default: 'Привет! Скидки есть?'
+        ba:
+          $ref: '#/components/schemas/baType'
+
+    baType:
+      type: string
+      default: 'ba001'
